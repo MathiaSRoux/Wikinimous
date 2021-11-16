@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <h1>
+    <%= @article.title %>
+    <small>
+      <%= link_to 'edit', edit_article_path %>
+      <%= link_to 'X', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+    </small>
+  </h1>
+  <p><%= @article.content %></p>
+</div>
